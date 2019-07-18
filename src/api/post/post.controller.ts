@@ -7,6 +7,8 @@ export class PostController {
   constructor(private readonly apiService: ApiService) {}
 
   @Post() getHello(@Body() postDto: PostDto): object {
+    if (!postDto.name) return { error: true, data: null };
+
     return { error: false, data: this.apiService.getHello(postDto.name) };
   }
 }
