@@ -25,7 +25,7 @@ $ npm run start:prod
 
 ```bash
 # GET method
-/api/get/hello/:name
+/api/get/hello/:name # 'name' must be a string
 
 # success response
 {"error": false, "data": "Hello name!"}
@@ -37,6 +37,8 @@ $ npm run start:prod
 ```bash
 # POST method
 /api/post/hello
+
+body: {"name": "must be a string"}
 
 # success response
 {"error": false, "data": "Hello name!"}
