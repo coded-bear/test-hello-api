@@ -24,8 +24,8 @@ $ npm run start:prod
 ## Usage
 
 ```bash
-# GET method
-/api/get/hello/:name # 'name' must be a string
+# GET method ( 'name' must be a string )
+/api/get/hello/:name
 
 # success response
 {"error": false, "data": "Hello name!"}
@@ -35,10 +35,8 @@ $ npm run start:prod
 ```
 
 ```bash
-# POST method
+# POST method ( body: {"name": "must be a string"} )
 /api/post/hello
-
-body: {"name": "must be a string"}
 
 # success response
 {"error": false, "data": "Hello name!"}
