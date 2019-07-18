@@ -25,11 +25,22 @@ $ npm run start:prod
 
 ```bash
 # GET method
-/api/get/:name
+/api/get/hello/:name
 
 # success response
 {"error": false, "data": "Hello name!"}
 
 # failed response
-{"statusCode": 404, "error": "Not Found", "message": "some message"}
+{"statusCode": "code", "error": "some error", "message": "some message"}
+```
+
+```bash
+# POST method
+/api/post/hello
+
+# success response
+{"error": false, "data": "Hello name!"}
+
+# failed response
+{"statusCode": "code", "error": "some error", "message": "some message"}
 ```
