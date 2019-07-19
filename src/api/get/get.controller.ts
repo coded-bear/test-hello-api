@@ -1,11 +1,11 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { ApiService } from '../api.service';
+import { HelloService } from '../hello.service';
 
 @Controller('api/get/hello')
 export class GetController {
-  constructor(private readonly apiService: ApiService) {}
+  constructor(private readonly helloService: HelloService) {}
 
   @Get(':name') getHello(@Param('name') name: string): object {
-    return { error: false, data: this.apiService.getHello(name) };
+    return { error: false, data: this.helloService.getHello(name) };
   }
 }
