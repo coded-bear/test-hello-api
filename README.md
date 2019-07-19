@@ -1,4 +1,4 @@
-# my-test-api
+# test-hello-api
 
 My test REST API written in Nest.js.
 
